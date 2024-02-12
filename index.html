@@ -16,12 +16,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
 </head>
 
-<body class="debu">
+<body class="debug">
 
     <header id="side_header">
+
         <nav>
             <div class="logo">
                 <img src="./assets/img/mobile-logo.png" alt="" class="logo_mobile">
+                <img src="./assets/img/logo.svg" alt="" class="logo_desktop">
             </div>
             <!-- /.logo -->
             <div class="search">
@@ -33,26 +35,48 @@
                 </div>
             </div>
             <!-- /.search -->
-            <div class="bell">
-                <i class="fa-solid fa-bell"></i>
+            <div class="nav_icons">
+                <a href="#" class="icon_vanish"><i class="fa-solid fa-list "></i></a>
+                <a href="#" class="icon_vanish"><i class="fa-solid fa-circle-question vanish"></i></a>
+                <a href="#" class="icon_vanish"><i class="fa-solid fa-ellipsis-vertical vanish"></i></a>
+                <a href="#" class="bell"><i class="fa-solid fa-bell"></i></a>
             </div>
         </nav>
+
     </header>
     <!-- /#side_header -->
 
     <main id="side_main">
 
         <div id="left">
-        <div class="sidebar">
-            <div class="top_icons">
-                <i class="fa-solid fa-house"></i>
-                <i class="fa-solid fa-chart-simple"></i>
-                <i class="fa-solid fa-signal"></i>
+            <div class="sidebar">
+
+                <div class="top_icons">
+                    <div class="shortcut">
+                        <a href="#"><i class="fa-solid fa-house text-light"></i></a>
+                        <div class="shortcut_name">Home</div>
+                    </div>
+                    <div class="shortcut">
+                        <a href="#"><i class="fa-solid fa-chart-simple text-light"></i></a>
+                        <div class="shortcut_name">Stats</div>
+                    </div>
+                    <div class="shortcut">
+                        <a href="#"><i class="fa-solid fa-signal text-light"></i></a>
+                        <div class="shortcut_name">Home</div>
+                    </div>
+                </div>
+                <!-- /.top_icons -->
+
+                <div class="bottom_icons">
+                    <div class="shortcut">
+                        <a href="#"><i class="fa-solid fa-gear text-light"></i></a>
+                        <div class="shortcut_name">Admin</div>
+                    </div>
+                </div>
+                <!-- /.bottom_icons -->
+
+
             </div>
-            <div class="bottom_icons">
-                <i class="fa-solid fa-gear"></i>
-            </div>
-        </div>
         </div>
         <!-- /#left -->
 

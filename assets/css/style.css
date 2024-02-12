@@ -1,22 +1,22 @@
 /* #region debug */
-.debug header {
+/* .debug header {
     height: 50px;
     background-color: red;
-}
+} */
 
-.debug #side_main {
+/* .debug #side_main {
     display: flex;
-}
+} */
 
-.debug #left {
+/* .debug #left {
     width: 10%;
     background-color: blue;
-}
+} */
 
-.debug #right {
+/* .debug #right {
     width: 90%;
     background-color: palegoldenrod;
-}
+} */
 
 .debug .banner {
     height: 250px;
@@ -60,73 +60,96 @@
     --bo-notification: rgba(255, 143, 0, 1);
     --bo-light: rgba(248, 249, 250, 1);
     --bo-lighter: rgba(255, 255, 255, 1);
-    --bo-search:rgba(229, 229, 229, 1);
-    --bo-dark:rgba(5, 30, 52, 1);
+    --bo-search: rgba(229, 229, 229, 1);
+    --bo-dark: rgba(5, 30, 52, 1);
 }
 
 /* #endregion utilities */
 
 /* #region common */
-header{
-    background-color: var(--bo-light);
-    padding: 0.5rem 0;
+header {
     position: fixed;
     width: 100%;
-    height: 75px;
-    z-index: 1000;
+    z-index: 1;
 }
-nav{
+
+nav {
     background-color: var(--bo-lighter);
     display: flex;
     align-items: center;
+    height: 9vh;
+    padding: 0 0.2rem;
 }
-#left{
+
+#left {
     width: 15%;
     background-image: url(../img/sidebar-bg.png);
     background-color: var(--bo-dark);
     color: var(--bo-lighter);
     position: fixed;
     height: 100%;
-    z-index: 1000;
-    top: 75px;
+    z-index: 1;
+    top: 9vh;
 }
+
 /* #endregion common */
 
 /* #region header */
-.logo{
-    width:15%;
+.logo {
+    width: 15%;
+    padding-left: 0.3rem;
 }
-.logo_mobile{
+
+.logo_mobile {
     height: 60px;
     width: 60px;
 }
-.search{
+
+.logo_desktop {
+    display: none;
+}
+
+.search {
     width: 70%;
 }
-.box{
+
+.box {
     padding: 0.3rem 0.5rem;
     border-radius: 5px;
     background-color: var(--bo-search);
 
 }
-.search_bar{
+
+.search_bar {
     border: none;
     background-color: var(--bo-search);
     color: grey;
     font-size: 14px;
 }
 
-.bell{
+.nav_icons {
     width: 15%;
-    text-align: center;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.bell {
     color: var(--bo-notification);
 }
+
+.icon_vanish{
+    display: none;
+    color: grey;
+}
+
 /* #endregion header */
 
 /* #region main */
 
 /* #region left */
-.top_icons{
+.top_icons {
     height: 700px;
     display: flex;
     flex-direction: column;
@@ -135,10 +158,21 @@ nav{
     font-size: 20px;
     align-items: center;
 }
-.bottom_icons{
+
+.bottom_icons {
     padding: 2rem 0;
     font-size: 20px;
-text-align: center;
+    text-align: center;
+}
+.shortcut{
+    display: flex;
+    gap: 0.8rem;
+    justify-content: center;
+    align-items: center;
+}
+.shortcut_name{
+    font-size: 18px;
+    display: none;
 }
 /* #endregion left */
 
@@ -148,4 +182,14 @@ text-align: center;
 /* #endregion footer */
 
 /* #region media */
+@media screen and (min-width:769px) {
+    .logo_mobile {
+        display: none;
+    }
+
+    .logo_desktop, .icon_vanish, .shortcut_name{
+        display: inline-block;
+    }
+}
+
 /* #endregion media */
