@@ -1,7 +1,51 @@
 /* #region debug */
+.debug header{
+    height: 50px;
+    background-color: red;
+}
+.debug #side_main{
+    display: flex;
+}
+.debug #left{
+    width: 10%;
+    background-color: blue;
+}
+
+.debug #right{
+    width: 90%;
+    background-color: palegoldenrod;
+}
+.debug .banner{
+    height: 250px;
+    background-color: lightsalmon;
+}
+.debug .right_body{
+    height:1000px;
+    background-color: aqua;
+}
+.debug #classroom{
+    height: 500px;
+    background-color: lightgray;
+}
+.debug #faq{
+    height: 300px;
+    background-color: aquamarine;
+}
+.debug #todo{
+    height: 300px;
+    background-color: brown;
+}
+.debug #user_active{
+    height: 600px;
+    background-color: cornflowerblue;
+}
 /* #endregion debug */
 
 /* #region utilities */
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
 /* #endregion utilities */
 
 /* #region header */
