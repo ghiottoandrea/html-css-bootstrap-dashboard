@@ -61,6 +61,7 @@
     --bo-light: rgba(248, 249, 250, 1);
     --bo-lighter: rgba(255, 255, 255, 1);
     --bo-search:rgba(229, 229, 229, 1);
+    --bo-dark:rgba(5, 30, 52, 1);
 }
 
 /* #endregion utilities */
@@ -69,13 +70,26 @@
 header{
     background-color: var(--bo-light);
     padding: 0.5rem 0;
+    position: fixed;
+    width: 100%;
+    height: 75px;
+    z-index: 1000;
 }
 nav{
     background-color: var(--bo-lighter);
     display: flex;
     align-items: center;
 }
-
+#left{
+    width: 15%;
+    background-image: url(../img/sidebar-bg.png);
+    background-color: var(--bo-dark);
+    color: var(--bo-lighter);
+    position: fixed;
+    height: 100%;
+    z-index: 1000;
+    top: 75px;
+}
 /* #endregion common */
 
 /* #region header */
@@ -110,6 +124,24 @@ nav{
 /* #endregion header */
 
 /* #region main */
+
+/* #region left */
+.top_icons{
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 2rem 0;
+    font-size: 20px;
+    align-items: center;
+}
+.bottom_icons{
+    padding: 2rem 0;
+    font-size: 20px;
+text-align: center;
+}
+/* #endregion left */
+
 /* #endregion main */
 
 /* #region footer */
