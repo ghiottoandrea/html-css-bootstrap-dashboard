@@ -16,7 +16,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
 </head>
 
-<body class="debug">
+<body class="debu">
 
     <header id="side_header">
 
@@ -46,71 +46,117 @@
     </header>
     <!-- /#side_header -->
 
-    <main id="side_main">
+    <div class="wrapper">
 
-        <div id="left">
-            <div class="sidebar">
+        <div class="sidebar">
 
-                <div class="top_icons">
-                    <div class="shortcut">
-                        <a href="#"><i class="fa-solid fa-house text-light"></i></a>
-                        <div class="shortcut_name">Home</div>
-                    </div>
-                    <div class="shortcut">
-                        <a href="#"><i class="fa-solid fa-chart-simple text-light"></i></a>
-                        <div class="shortcut_name">Stats</div>
-                    </div>
-                    <div class="shortcut">
-                        <a href="#"><i class="fa-solid fa-signal text-light"></i></a>
-                        <div class="shortcut_name">Home</div>
+            <div class="top_icons">
+
+                <div class="shortcut">
+                    <a href="#"><i class="fa-solid fa-house text-light"></i></a>
+                    <div class="shortcut_name">Home</div>
+                </div>
+                <div class="shortcut">
+                    <a href="#"><i class="fa-solid fa-chart-simple text-light"></i></a>
+                    <div class="shortcut_name">Stats</div>
+                </div>
+                <div class="shortcut">
+                    <a href="#"><i class="fa-solid fa-signal text-light"></i></a>
+                    <div class="shortcut_name">Home</div>
+                </div>
+
+            </div>
+            <!-- /.top_icons -->
+
+            <div class="bottom_icons">
+                <div class="shortcut">
+                    <a href="#"><i class="fa-solid fa-gear text-light"></i></a>
+                    <div class="shortcut_name">Admin</div>
+                </div>
+            </div>
+            <!-- /.bottom_icons -->
+
+
+        </div>
+        <!-- /.sidebar -->
+
+        <main id="side_main">
+            <div class="banner">
+
+                <div class="new_students">
+                    <span>Nuovo Studente</span>
+                    <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
+                        aria-controls="offcanvasRight"><i class="fa-solid fa-plus btn_student"></i></button>
+
+                    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight"
+                        aria-labelledby="offcanvasRightLabel">
+                        <div class="offcanvas-header">
+                            <h5 class="offcanvas-title" id="offcanvasRightLabel">Offcanvas right</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
+                                aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body">
+                            ...
+                        </div>
                     </div>
                 </div>
-                <!-- /.top_icons -->
+                <!-- /.new_students -->
 
-                <div class="bottom_icons">
-                    <div class="shortcut">
-                        <a href="#"><i class="fa-solid fa-gear text-light"></i></a>
-                        <div class="shortcut_name">Admin</div>
+                <div class="blaze">
+                    <div class="first_row">
+                        <h2>Boolean</h2>
+                        <span class="back">Piano blaze</span>
+                    </div>
+                    <div class="second_row">
+                        <span class="back">3 app</span>
+                        <i class="fa-solid fa-angles-right"></i>
+                        <a href="#" class="back_plus"><i class="fa-solid fa-plus text-light"></i></a>
                     </div>
                 </div>
-                <!-- /.bottom_icons -->
+                <!-- /.blaze -->
+                <div class="students">
+                    <div class="mt-3">Studenti online negli ultimi 30 minuti</div>
+                    <div class="count">125</div>
+                </div>
+                <!-- /.students -->
 
 
             </div>
-        </div>
-        <!-- /#left -->
-
-        <div id="right">
-
-            <div class="banner"></div>
             <!-- /.banner -->
-            <div class="row">
 
-                <div class="col-12 col-lg-8">
+            <div class="container">
+                <div class="row">
 
-                    <section id="classroom"></section>
-                    <!-- /#classroom -->
+                    <div class="col-12 col-lg-8">
 
-                    <section id="faq"></section>
-                    <!-- /#faq -->
+                        <section id="classroom"></section>
+                        <!-- /#classroom -->
 
-                </div>
+                        <section id="faq"></section>
+                        <!-- /#faq -->
 
-                <div class="col-12 col-lg-4">
+                    </div>
 
-                    <section id="todo"></section>
-                    <!-- /#todo -->
+                    <div class="col-12 col-lg-4">
 
-                    <section id="user_active"></section>
-                    <!-- /#user_active -->
+                        <section id="todo"></section>
+                        <!-- /#todo -->
 
+                        <section id="user_active"></section>
+                        <!-- /#user_active -->
+
+                    </div>
                 </div>
             </div>
+        </main>
+        <!-- /#side_main -->
 
-        </div>
-        <!-- /#right -->
-    </main>
-    <!-- /#side_main -->
+    </div>
+    <!-- /.wrapper -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
 
 </body>
 

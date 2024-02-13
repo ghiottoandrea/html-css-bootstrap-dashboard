@@ -63,35 +63,56 @@
     --bo-search: rgba(229, 229, 229, 1);
     --bo-dark: rgba(5, 30, 52, 1);
 }
+.btn_student{
+    color: var(--bo-lighter);
+    background-color: var(--bo-primary);
+    padding: 0.5rem;
+    border: 1px solid white;
+    border-radius: 5px;
+    }
+    
 
 /* #endregion utilities */
 
 /* #region common */
+body{
+    height: 100vh;
+}
 header {
+    background-color: var(--bo-lighter);
     position: fixed;
     width: 100%;
     z-index: 1;
 }
 
 nav {
-    background-color: var(--bo-lighter);
     display: flex;
     align-items: center;
-    height: 9vh;
-    padding: 0 0.2rem;
+    height: 70px;
 }
 
-#left {
-    width: 15%;
+.sidebar {
+    width: 70px;
     background-image: url(../img/sidebar-bg.png);
     background-color: var(--bo-dark);
     color: var(--bo-lighter);
     position: fixed;
     height: 100%;
     z-index: 1;
-    top: 9vh;
+    top: 70px;
 }
-
+.banner{
+    background-color: var(--bo-primary);
+    color: var(--bo-lighter);
+    position: absolute;
+    top: 70px;
+    left: 70px;
+    width: 100%;
+    padding: 1rem;
+}
+.first_row h2{
+    display: inline;
+}
 /* #endregion common */
 
 /* #region header */
@@ -110,7 +131,7 @@ nav {
 }
 
 .search {
-    width: 70%;
+    width: 75%;
 }
 
 .box {
@@ -128,7 +149,7 @@ nav {
 }
 
 .nav_icons {
-    width: 15%;
+    width: 10%;
     display: flex;
     justify-content:center;
     align-items: center;
@@ -146,9 +167,9 @@ nav {
 
 /* #endregion header */
 
-/* #region main */
 
-/* #region left */
+
+/* #region sidebar */
 .top_icons {
     height: 700px;
     display: flex;
@@ -174,7 +195,32 @@ nav {
     font-size: 18px;
     display: none;
 }
-/* #endregion left */
+/* #endregion sidebar */
+
+/* #region main */
+
+/* #region banner */
+.back{
+    background-color: rgb(18, 82, 173);
+    padding: 0.2rem 0.5rem;
+    border-radius: 15px;
+}
+.back_plus{
+    background-color: rgb(18, 82, 173);
+    padding: 0.4rem 0.5rem;
+    border-radius: 20px;
+    font-size: 10px;
+}
+.first_row{
+    margin-top: 1rem;
+    padding-bottom: 0.5rem;
+}
+
+.count{
+    font-size: 30px;
+}
+
+/* #endregion banner */
 
 /* #endregion main */
 
@@ -182,13 +228,19 @@ nav {
 /* #endregion footer */
 
 /* #region media */
-@media screen and (min-width:769px) {
+@media screen and (min-width:1200px) {
     .logo_mobile {
         display: none;
     }
 
     .logo_desktop, .icon_vanish, .shortcut_name{
         display: inline-block;
+    }
+    .sidebar{
+        width: 150px;
+    }
+    .banner{
+        left: 150px;
     }
 }
 
