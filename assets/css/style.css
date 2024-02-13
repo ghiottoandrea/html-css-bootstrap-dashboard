@@ -63,21 +63,24 @@
     --bo-search: rgba(229, 229, 229, 1);
     --bo-dark: rgba(5, 30, 52, 1);
 }
-.btn_student{
+
+.btn_student {
     color: var(--bo-lighter);
     background-color: var(--bo-primary);
     padding: 0.5rem;
     border: 1px solid white;
     border-radius: 5px;
-    }
-    
+}
+
 
 /* #endregion utilities */
 
 /* #region common */
-body{
+body {
     height: 100vh;
+    overflow-y: auto;
 }
+
 header {
     background-color: var(--bo-lighter);
     position: fixed;
@@ -101,18 +104,25 @@ nav {
     z-index: 1;
     top: 70px;
 }
-.banner{
-    background-color: var(--bo-primary);
-    color: var(--bo-lighter);
+
+#side_main {
     position: absolute;
     top: 70px;
     left: 70px;
     width: calc(100% - 70px);
-    padding: 1rem;
 }
-.first_row h2{
+
+.banner {
+    background-color: var(--bo-primary);
+    color: var(--bo-lighter);
+    padding: 0.5rem 1rem;
+    /* height: 11vh; */
+}
+
+.first_row h2 {
     display: inline;
 }
+
 /* #endregion common */
 
 /* #region header */
@@ -151,7 +161,7 @@ nav {
 .nav_icons {
     width: 10%;
     display: flex;
-    justify-content:center;
+    justify-content: center;
     align-items: center;
     gap: 1rem;
 }
@@ -160,7 +170,7 @@ nav {
     color: var(--bo-notification);
 }
 
-.vanish{
+.vanish {
     display: none;
     color: grey;
 }
@@ -184,44 +194,131 @@ nav {
     font-size: 20px;
     text-align: center;
 }
-.shortcut{
+
+.shortcut {
     display: flex;
     gap: 0.8rem;
     justify-content: center;
     align-items: center;
 }
-.shortcut_name{
+
+.shortcut_name {
     font-size: 18px;
     display: none;
 }
+
 /* #endregion sidebar */
 
 /* #region main */
 
 /* #region banner */
-.back{
+.back {
     background-color: rgb(18, 82, 173);
     padding: 0.2rem 0.5rem;
     border-radius: 15px;
     text-decoration: none;
     color: var(--bo-lighter);
 }
-.back_plus{
+
+.back_plus {
     background-color: rgb(18, 82, 173);
     padding: 0.4rem 0.5rem;
     border-radius: 20px;
     font-size: 10px;
 }
-.first_row{
+
+.first_row {
     margin-top: 1rem;
     padding-bottom: 0.5rem;
 }
 
-.count{
+.count {
     font-size: 30px;
 }
 
 /* #endregion banner */
+
+/* #region classrooms */
+.classrooms {
+    border: 1px solid lightgray;
+
+}
+
+.title {
+    background-color: var(--bo-light);
+    padding: 0.5rem 1.5rem;
+    border-bottom: 1px solid lightgray;
+}
+
+.next_class {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem 1.5rem;
+    border-bottom: 1px solid lightgray;
+
+}
+
+.name {
+    width: 50%;
+    font-size: 12px;
+
+}
+
+/* .date,
+.roi, */
+.status,
+.action {
+    width: 25%;
+    text-align: center;
+    font-size: 12px;
+}
+
+.date,
+.roi {
+    display: none;
+}
+
+.logo_class {
+    width: 30px;
+}
+
+.done,
+.process,
+.failed {
+    color: var(--bo-light);
+    border-radius: 5px;
+    padding: 0.2rem 0.3rem;
+    font-size: 10px;
+}
+
+.done {
+    background-color: green;
+}
+
+.process {
+    background-color: orange;
+}
+
+.failed {
+    background-color: red;
+}
+
+.action {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon_action {
+    color: gray;
+    border: 1px solid grey;
+    padding: 0.5rem;
+    border-radius: 5px;
+}
+
+/* #endregion classrooms */
 
 /* #endregion main */
 
@@ -230,30 +327,60 @@ nav {
 
 /* #region media */
 @media screen and (min-width:1200px) {
-    .logo_mobile, .back_plus {
+
+    .logo_mobile,
+    .back_plus {
         display: none;
     }
 
-    .logo_desktop, .vanish, .shortcut_name{
+    .logo_desktop,
+    .vanish,
+    .shortcut_name {
         display: inline-block;
     }
-    .sidebar{
+
+    .sidebar {
         width: 150px;
     }
-    .banner{
+
+    #side_main {
         left: 150px;
+
+    }
+
+    .banner {
         display: flex;
         justify-content: space-between;
         align-items: center;
     }
-    .new_students{
+
+    .new_students {
         order: 3;
     }
-    .blaze{
-        order:1;
+
+    .blaze {
+        order: 1;
     }
-    .students{
+
+    .students {
         order: 2;
+    }
+
+    .date,
+    .roi {
+        display: inline-block;
+    }
+
+    .date,
+    .roi,
+    .status,
+    .action {
+        width: 10%;
+        text-align: center;
+        font-size: 12px;
+    }
+    .name{
+        width: 60%;
     }
 }
 
