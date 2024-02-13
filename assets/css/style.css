@@ -107,7 +107,7 @@ nav {
     position: absolute;
     top: 70px;
     left: 70px;
-    width: 100%;
+    width: calc(100% - 70px);
     padding: 1rem;
 }
 .first_row h2{
@@ -160,13 +160,12 @@ nav {
     color: var(--bo-notification);
 }
 
-.icon_vanish{
+.vanish{
     display: none;
     color: grey;
 }
 
 /* #endregion header */
-
 
 
 /* #region sidebar */
@@ -204,6 +203,8 @@ nav {
     background-color: rgb(18, 82, 173);
     padding: 0.2rem 0.5rem;
     border-radius: 15px;
+    text-decoration: none;
+    color: var(--bo-lighter);
 }
 .back_plus{
     background-color: rgb(18, 82, 173);
@@ -229,11 +230,11 @@ nav {
 
 /* #region media */
 @media screen and (min-width:1200px) {
-    .logo_mobile {
+    .logo_mobile, .back_plus {
         display: none;
     }
 
-    .logo_desktop, .icon_vanish, .shortcut_name{
+    .logo_desktop, .vanish, .shortcut_name{
         display: inline-block;
     }
     .sidebar{
@@ -241,6 +242,18 @@ nav {
     }
     .banner{
         left: 150px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .new_students{
+        order: 3;
+    }
+    .blaze{
+        order:1;
+    }
+    .students{
+        order: 2;
     }
 }
 
