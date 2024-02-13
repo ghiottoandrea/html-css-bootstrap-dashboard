@@ -91,7 +91,7 @@ header {
 nav {
     display: flex;
     align-items: center;
-    height: 70px;
+    height: 50px;
 }
 
 .sidebar {
@@ -102,12 +102,12 @@ nav {
     position: fixed;
     height: 100%;
     z-index: 1;
-    top: 70px;
+    top: 50px;
 }
 
 #side_main {
     position: absolute;
-    top: 70px;
+    top: 50px;
     left: 70px;
     width: calc(100% - 70px);
 }
@@ -264,8 +264,6 @@ nav {
 
 }
 
-/* .date,
-.roi, */
 .status,
 .action {
     width: 25%;
@@ -318,6 +316,13 @@ nav {
 }
 
 /* #endregion classrooms */
+
+/* #region active_user */
+.month{
+    padding: 0.5rem 0;
+    border-bottom: 1px solid lightgray;
+}
+/* #endregion active_user */
 
 /* #endregion main */
 
